@@ -1,5 +1,5 @@
 import React from "react";
-import RestaurantData from "./RestaurantData";
+import RestaurantData from "../Data/RestaurantData";
 
 // Component for the Menu Preview Section
 const MenuPreview = () => (
@@ -16,17 +16,19 @@ const MenuPreview = () => (
         {RestaurantData.signatureDishes.map((dish) => {
           const Icon = dish.icon;
           return (
-          <div
-            key={dish.id}
-            className="bg-gray-800 p-6 rounded-xl shadow-lg border border-yellow-800/20 transform hover:scale-[1.02] transition duration-300"
-          >
-            {Icon ? <Icon className="w-10 h-10 text-yellow-500 mx-auto mb-4" /> : null}
-            <h3 className="text-2xl font-semibold mb-2 font-serif">
-              {dish.name}
-            </h3>
-            <p className="text-gray-400 mb-4">{dish.description}</p>
-            <p className="text-3xl font-bold text-yellow-500">{dish.price}</p>
-          </div>
+            <div
+              key={dish.id}
+              className="bg-gray-800 p-6 rounded-xl shadow-lg border border-yellow-800/20 transform hover:scale-[1.02] transition duration-300"
+            >
+              {Icon ? (
+                <Icon className="w-10 h-10 text-yellow-500 mx-auto mb-4" />
+              ) : null}
+              <h3 className="text-2xl font-semibold mb-2 font-serif">
+                {dish.name}
+              </h3>
+              <p className="text-gray-400 mb-4">{dish.description}</p>
+              <p className="text-3xl font-bold text-yellow-500">{dish.price}</p>
+            </div>
           );
         })}
       </div>

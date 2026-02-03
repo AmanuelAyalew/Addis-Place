@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RestaurantData from "../RestaurantData";
+import RestaurantData from "../Data/RestaurantData";
 
 const ResturantList = () => {
   const restaurants = [

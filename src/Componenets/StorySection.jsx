@@ -1,8 +1,8 @@
-
 import React from "react";
-import RestaurantData from "./RestaurantData";
-import { Star, ChefHat, Users } from 'lucide-react';
 
+import RestaurantData from "../Data/RestaurantData";
+import { Star, ChefHat, Users } from "lucide-react";
+import Background from "../Assets/Background.jpg";
 
 // Component for the About/Story Section
 const StorySection = () => (
@@ -36,7 +36,7 @@ const StorySection = () => (
         {/* Placeholder Image */}
         <div className="lg:order-2 rounded-xl overflow-hidden shadow-2xl">
           <img
-            src="https://placehold.co/800x600/1F2937/FACC15?text=Chef+Preparing+Dish"
+            src={Background}
             alt="Chef preparing a dish"
             className="w-full h-auto object-cover transform hover:scale-105 transition duration-500 ease-in-out"
           />
