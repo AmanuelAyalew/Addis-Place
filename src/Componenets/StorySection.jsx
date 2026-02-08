@@ -19,15 +19,15 @@ const StorySection = () => (
           </p>
           <div className="space-y-4">
             <div className="flex items-center text-gray-300">
-              <Star className="w-6 h-6 text-yellow-500 mr-3 flex-shrink-0" />
+              <Star className="w-6 h-6 text-yellow-500 mr-3 " />
               <span className="font-semibold">Award-Winning Chefs</span>
             </div>
             <div className="flex items-center text-gray-300">
-              <ChefHat className="w-6 h-6 text-yellow-500 mr-3 flex-shrink-0" />
+              <ChefHat className="w-6 h-6 text-yellow-500 mr-3 " />
               <span className="font-semibold">Locally Sourced Ingredients</span>
             </div>
             <div className="flex items-center text-gray-300">
-              <Users className="w-6 h-6 text-yellow-500 mr-3 flex-shrink-0" />
+              <Users className="w-6 h-6 text-yellow-500 mr-3 " />
               <span className="font-semibold">Impeccable Service</span>
             </div>
           </div>

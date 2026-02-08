@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RestaurantData from "../Data/RestaurantData";
 import { X, Menu as MenuIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
   SignedIn,
@@ -25,12 +26,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-blue-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-2xl font-serif font-bold text-yellow-500 tracking-wider"
           >
             {RestaurantData.name}
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

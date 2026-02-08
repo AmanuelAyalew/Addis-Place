@@ -24,8 +24,8 @@ const ContactReservation = () => {
   };
 
   return (
-    <section id="reservations" className="py-20 bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="reservations" className="py-50 bg-gray-900 text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-yellow-500 text-center mb-4">
           Reserve Your Experience
         </h2>
@@ -34,9 +34,9 @@ const ContactReservation = () => {
           hosting you.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Reservation Form */}
-          <div className="lg:col-span-2 bg-gray-800 p-8 rounded-xl shadow-xl border border-yellow-800/30">
+          <div className="lg:col-span-2 bg-gray-800 p-8  ml-10 rounded-xl shadow-xl border border-yellow-800/30">
             <h3 className="text-3xl font-serif font-semibold text-yellow-500 mb-6">
               Book Online
             </h3>
@@ -132,8 +132,8 @@ const ContactReservation = () => {
           </div>
 
           {/* Contact Info */}
-          <div id="contact" className="lg:col-span-1 space-y-8">
-            <div className="bg-gray-800 p-8 rounded-xl shadow-xl border border-yellow-800/30">
+          <div id="contact" className="lg:col-span-1 space-y-4">
+            <div className="bg-gray-800 p-10 rounded-xl w-90 shadow-xl border border-yellow-800/30">
               <h3 className="text-3xl font-serif font-semibold text-yellow-500 mb-4 flex items-center">
                 <Clock className="w-6 h-6 mr-3" />
                 Opening Hours
@@ -158,7 +158,7 @@ const ContactReservation = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-gray-800 p-8 rounded-xl shadow-xl border border-yellow-800/30">
+            <div className="bg-gray-800 p-10 w-90 mt-5  rounded-xl shadow-xl border border-yellow-800/30">
               <h3 className="text-3xl font-serif font-semibold text-yellow-500 mb-4 flex items-center">
                 <MapPin className="w-6 h-6 mr-3" />
                 Find Us
