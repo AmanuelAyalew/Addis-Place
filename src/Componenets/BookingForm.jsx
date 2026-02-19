@@ -63,7 +63,34 @@ const BookingForm = ({
       console.warn("Failed to upload booking to storage:", err);
     }
 
-    if (onSubmit) onSubmit(booking);
+    // Insert booking into the `bookings` table so admin can manage it
+    try {
+      const { data, error } = await supabase.from("bookings").insert([
+        {
+          restaurant_id: restaurant?.id || null,
+          restaurant_name: restaurant?.name || null,
+          name: booking.name,
+          email: booking.email,
+          phone: booking.phone,
+          time: booking.time,
+          created_at: booking.createdAt,
+          user_id: currentUser?.id || null,
+          user_full_name: currentUser?.fullName || currentUser?.name || null,
+          user_email: currentUser?.email || null,
+        },
+      ]);
+
+      if (error) {
+        console.error("Failed to save booking to database:", error);
+      } else {
+        // Use DB row as the canonical booking object for callbacks
+        const saved = Array.isArray(data) ? data[0] : data;
+        if (onSubmit) onSubmit(saved);
+      }
+    } catch (err) {
+      console.error("Unexpected error saving booking:", err);
+      if (onSubmit) onSubmit(booking);
+    }
   };
 
   return (
